@@ -22,7 +22,7 @@ jobs:
 
       - name: Replace target working tree with source contents
         run: |
-          rsync -a --delete --exclude='.git' "$RUNNER_TEMP/source/" ./
+          rsync -a --delete --exclude='.git' --exclude='.github/workflows/' "$RUNNER_TEMP/source/" ./
 
       - name: Commit mirrored docs
         run: |
