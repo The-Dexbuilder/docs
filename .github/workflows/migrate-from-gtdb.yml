@@ -1,0 +1,53 @@
+name: Migrate current DexBuilder docs
+
+on:
+  push:
+    paths:
+      - ".github/workflows/migrate-from-gtdb.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone current source docs
+        run: |
+          git clone --depth 1 --branch main https://github.com/kialison/gtdb.git "$RUNNER_TEMP/source"
+
+      - name: Replace target working tree with source contents
+        shell: bash
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a "$RUNNER_TEMP/source/." .
+          rm -rf .git
+          # restore target repository metadata
+          git init
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch origin main
+          git checkout -B main origin/main
+          # wipe tracked target files, then copy source again
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a "$RUNNER_TEMP/source/." .
+          rm -rf .git
+
+      - name: Commit mirrored docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Migrate DexBuilder docs from kialison/gtdb"
+          git push origin HEAD:main
