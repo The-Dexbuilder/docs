@@ -1,0 +1,21 @@
+---
+title: "WebSocket Overview"
+description: "Event Contracts API real-time data overview."
+---
+
+The Event Contracts WebSocket API provides public market data and authenticated account updates.
+
+## Connection
+
+```text
+wss://broker.dexbuilder.com/ws/dex-builder/event-contracts
+```
+
+Use one connection for the channels of the selected product. Prediction Markets uses `ec.*`; Event Contracts uses `ec.*`.
+
+## Channel groups
+
+- Public channels: `ec.trades`, `ec.depth`, `ec.bbo`, `ec.status`, `ec.cpi`, `ec.candlestick`, and `ec.oc_price`
+- Private channels: `ec.orders`, `ec.usertrades`, `ec.positions`, and `ec.settlements`
+
+Public channels do not require authentication. Private channels require an API Key signature. See [WebSocket Protocol](./protocol), [Public Channels](./public-channels), and [Private Channels](./private-channels).

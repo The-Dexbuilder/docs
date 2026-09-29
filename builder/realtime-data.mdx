@@ -1,0 +1,33 @@
+---
+title: "实时数据"
+description: "了解 DexBuilder 的行情、订单、成交、仓位与账户实时数据能力。"
+---
+
+DexBuilder 通过 WebSocket 与内部实时数据服务持续更新 DEX 中的行情和交易状态，保证订单、成交、仓位和资产信息及时同步。
+
+## 实时数据类型
+
+- Ticker 与市场行情
+- 订单簿
+- 市场成交
+- 用户订单状态
+- 用户成交
+- 仓位变化
+- 账户余额
+- 风险与强平相关状态
+
+## 数据同步
+
+DEX 页面会在首次加载时获取当前完整状态，并持续接收实时更新。当连接发生变化时，系统会重新建立连接并恢复必要的数据状态。
+
+## API / WebSocket 集成
+
+对于需要将实时数据连接到其他系统的场景，可以使用对应产品的 WebSocket API。
+
+<Card title="查看 PerpDEX WebSocket API" href="/api-reference/perpdex/websocket/overview" icon="bolt">
+  查看 WebSocket 地址、频道、认证方式与消息格式。
+</Card>
+
+<Note>
+不同产品支持的 WebSocket 频道不同，具体以各产品 API Reference 为准。
+</Note>

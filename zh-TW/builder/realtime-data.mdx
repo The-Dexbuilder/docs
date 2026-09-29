@@ -1,0 +1,33 @@
+---
+title: "即時資料"
+description: "瞭解 DexBuilder 的行情、訂單、成交、倉位與帳戶即時資料能力。"
+---
+
+DexBuilder 透過 WebSocket 與內部即時資料服務持續更新 DEX 中的行情和交易狀態，保證訂單、成交、倉位和資產資訊及時同步。
+
+## 即時資料類型
+
+- Ticker 與市場行情
+- 訂單簿
+- 市場成交
+- 使用者訂單狀態
+- 使用者成交
+- 倉位變化
+- 帳戶餘額
+- 風險與強平相關狀態
+
+## 資料同步
+
+DEX 頁面會在首次加載時取得目前完整狀態，並持續接收即時更新。當連接發生變化時，系統會重新建立連接並恢復必要的資料狀態。
+
+## API / WebSocket 集成
+
+對於需要將即時資料連接到其他系統的場景，可以使用對應產品的 WebSocket API。
+
+<Card title="檢視 PerpDEX WebSocket API" href="/zh-TW/api-reference/perpdex/websocket/overview" icon="bolt">
+  檢視 WebSocket 位址、頻道、認證方式與消息格式。
+</Card>
+
+<Note>
+不同產品支援的 WebSocket 頻道不同，具體以各產品 API Reference 為準。
+</Note>

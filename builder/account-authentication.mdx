@@ -1,0 +1,44 @@
+---
+title: "账户与认证"
+description: "了解 DexBuilder 提供的用户账户、登录与认证能力。"
+---
+
+DexBuilder 提供完整的用户账户与认证能力，用于支撑 DEX 的登录、账户创建、账户识别和交易认证流程。
+
+## 账户流程
+
+```text
+用户进入 DEX
+      ↓
+登录 / 连接钱包
+      ↓
+创建或识别账户
+      ↓
+完成必要认证
+      ↓
+进入资产与交易
+```
+
+DexBuilder 会统一处理账户状态及交易所需的认证流程，并在 DEX 中提供对应的页面与状态展示。
+
+## 支持能力
+
+- 用户登录与账户识别
+- 钱包连接与授权
+- 交易账户创建
+- 账户状态查询
+- 认证状态管理
+- 多端账户状态同步
+- 异常状态与认证提示
+
+## API 认证
+
+对于通过 REST API 或 WebSocket 进行系统集成的场景，需要按照对应产品的 API 认证规则完成签名和权限校验。
+
+<Card title="查看认证文档" href="/api-reference/perpdex/authentication" icon="key">
+  查看 PerpDEX API 的认证与签名规则。
+</Card>
+
+<Note>
+DEX 页面中的用户账户流程由 DexBuilder 产品能力提供；API Key、签名等内容主要用于程序化接口调用场景。
+</Note>

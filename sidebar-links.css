@@ -1,0 +1,50 @@
+/* Reserve space in the scrollable navigation for the fixed links. */
+#sidebar-content {
+  padding-bottom: 108px !important;
+  scroll-padding-bottom: 108px;
+}
+
+/* DexBuilder fixed links above the language selector */
+#dexbuilder-sidebar-links {
+  position: fixed;
+  left: 0;
+  bottom: 44px;
+  width: 20rem;
+  box-sizing: border-box;
+  z-index: 40;
+  padding: 14px 28px 12px;
+  border-top: 1px solid rgba(127, 127, 127, 0.22);
+  background: var(--background, #0b0f0d);
+}
+
+#dexbuilder-sidebar-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  color: inherit;
+  opacity: 0.72;
+  font-size: 14px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+#dexbuilder-sidebar-links a:hover {
+  opacity: 1;
+}
+
+#dexbuilder-sidebar-links a::after {
+  content: "↗";
+  flex: 0 0 auto;
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+/* Do not render the desktop floating block on mobile/tablet. */
+@media (max-width: 1023px) {
+  #dexbuilder-sidebar-links {
+    display: none;
+  }
+}

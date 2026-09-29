@@ -1,0 +1,46 @@
+---
+title: "Event Contracts Developer Documentation"
+sidebarTitle: "Overview"
+description: "API and tooling documentation for Event Contracts developers, covering market data, order placement, and position redemption."
+---
+
+## Developer Quickstart
+
+Make your first API request in just a few minutes. Learn the core capabilities of Event Contracts, retrieve market data, place orders, and redeem winning positions after market settlement.
+
+<CodeGroup>
+
+```bash API
+curl -G "https://api.dexbuilder.com/api/v4/event_contracts/markets" \
+  --data-urlencode "active=true" \
+  --data-urlencode "closed=false" \
+  --data-urlencode "limit=5"
+```
+
+</CodeGroup>
+
+## Learn About Event Contracts
+
+Start by understanding how Event Contracts work and the core concepts behind markets and trading, then choose the integration path that fits your product.
+
+<CardGroup cols={3}>
+  <Card title="Event Contracts" icon="chart-line" href="/en/event-contracts/event-contracts">
+    Learn how Event Contracts work and how they are used.
+  </Card>
+
+  <Card title="Core Concepts" icon="book" href="/en/event-contracts/markets-events">
+    Learn about events, markets, prices, order books, positions, orders, and settlement.
+  </Card>
+
+  <Card title="API" icon="code" href="/en/event-contracts/api/overview">
+    Get a quick overview of the API and start building your product.
+  </Card>
+</CardGroup>
+
+## DexBuilder Grants
+
+DexBuilder provides development support and incentive resources for ecosystem projects. Projects can apply based on their actual business use case.
+
+<Card title="Apply for Support" icon="rocket" href="mailto:grants@example.com">
+  Submit your project information to apply for Event Contracts development support.
+</Card>
