@@ -4,7 +4,7 @@ sidebarTitle: "私有頻道"
 description: "訂閱目前認證使用者的訂單、成交、持倉和結算更新。"
 ---
 
-私有頻道需要 API Key 簽名認證。API Secret 只在本地用於簽名，不能透過網路發送。詳見[WebSocket 認證](./authentication)。
+私有頻道需要 API Key 簽名認證。API Secret 只在本地用於簽名，不能透過網路傳送。詳見 [WebSocket 認證](./authentication)。
 
 ## 訂閱
 
@@ -31,11 +31,11 @@ description: "訂閱目前認證使用者的訂單、成交、持倉和結算更
 }
 ```
 
-取消訂閱時使用相同的 payload，並將 `op` 設定為 `unsubscribe`。文檔不暴露內部使用者 Header 或 broker 標識。
+取消訂閱時使用相同的 payload，並將 `op` 設定為 `unsubscribe`。文件不暴露內部使用者 Header 或 broker 標識。
 
 ## `pred.orders`
 
-帳戶訂單狀態變化。回傳欄位包括 `order_id`、`client_order_id`、`event_id`、`condition_id`、`token_id`、`outcome`、`side`、`order_mode`、`order_type`、`px`、`qty`、`filled_qty`、`left_qty`、`status`、`created_ts` 和 `updated_ts`。
+帳戶訂單狀態變化。返回欄位包括 `order_id`、`client_order_id`、`event_id`、`condition_id`、`token_id`、`outcome`、`side`、`order_mode`、`order_type`、`px`、`qty`、`filled_qty`、`left_qty`、`status`、`created_ts` 和 `updated_ts`。
 
 ```json
 {
@@ -61,7 +61,7 @@ description: "訂閱目前認證使用者的訂單、成交、持倉和結算更
 
 ## `pred.usertrades`
 
-帳戶成交推送。回傳 `trade_id`、`order_id`、`condition_id`、`token_id`、`side`、`role`、`px`、`qty`、`fee_rate`、`status` 和 `created_ts`。
+帳戶成交推送。返回 `trade_id`、`order_id`、`condition_id`、`token_id`、`side`、`role`、`px`、`qty`、`fee_rate`、`status` 和 `created_ts`。
 
 ```json
 {
@@ -84,11 +84,11 @@ description: "訂閱目前認證使用者的訂單、成交、持倉和結算更
 }
 ```
 
-僅推送已確認的帳戶成交；具體是否推送 MATCHED 事件取決於服務設定。
+僅推送已確認的帳戶成交；是否推送 MATCHED 事件取決於服務設定。
 
 ## `pred.positions`
 
-帳戶倉位變化。回傳 `position_id`、`event_id`、`token_id`、`outcome`、`qty`、`avg_px`、`settle_status`、`locked_qty`、`available_qty`、`claimable_amount` 和 `updated_ts`。
+帳戶倉位變化。返回 `position_id`、`event_id`、`token_id`、`outcome`、`qty`、`avg_px`、`settle_status`、`locked_qty`、`available_qty`、`claimable_amount` 和 `updated_ts`。
 
 ```json
 {
@@ -111,7 +111,7 @@ description: "訂閱目前認證使用者的訂單、成交、持倉和結算更
 }
 ```
 
-倉位文檔不描述標記價格欄位。
+倉位文件不描述標記價格欄位。
 
 ## `pred.settlements`
 
@@ -134,4 +134,4 @@ description: "訂閱目前認證使用者的訂單、成交、持倉和結算更
 }
 ```
 
-私有頻道是事件驅動的。重連後應透過對應 REST 介面恢復目前狀態；訂閱私有頻道不會自動回傳完整帳戶快照。
+私有頻道是事件驅動的。重連後應透過對應 REST 介面恢復目前狀態；訂閱私有頻道不會自動返回完整帳戶快照。
