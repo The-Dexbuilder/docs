@@ -4,19 +4,19 @@ sidebarTitle: "概覽"
 description: "連接事件合約 WebSocket，接收即時公開行情和認證帳戶事件。"
 ---
 
-事件合約 WebSocket API 提供公共行情数据和需要认证的账户更新。
+事件合約 WebSocket API 提供公共行情資料和需要認證的帳戶更新。
 
-## 连接
+## 連接
 
 ```text
 wss://broker.dexbuilder.com/ws/dex-builder/event-contracts
 ```
 
-在同一产品的频道中复用一个连接。事件合约使用 `ec.*` 前缀。
+在同一產品的頻道中復用一個連接。事件合約使用 `ec.*` 前綴。
 
-## 频道分组
+## 頻道分組
 
-- 公共频道：`ec.trades`、`ec.depth`、`ec.bbo`、`ec.status`、`ec.cpi`、`ec.candlestick`、`ec.oc_price`
-- 私有频道：`ec.orders`、`ec.usertrades`、`ec.positions`、`ec.settlements`
+- 公共頻道：`ec.trades`、`ec.depth`、`ec.bbo`、`ec.status`、`ec.cpi`、`ec.candlestick`、`ec.oc_price`
+- 私有頻道：`ec.orders`、`ec.usertrades`、`ec.positions`、`ec.settlements`
 
-公共频道不需要认证，私有频道需要 API Key 签名。请参阅[WebSocket 协议](./protocol)、[公共频道](./public-channels)和[私有频道](./private-channels)。
+公共頻道不需要認證，私有頻道需要 API Key 簽名。請參閱[WebSocket 協議](./protocol)、[公共頻道](./public-channels)和[私有頻道](./private-channels)。

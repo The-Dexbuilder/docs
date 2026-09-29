@@ -2199,7 +2199,7 @@
     "schemas": {
       "Error": {
         "type": "object",
-        "description": "錯誤回應。",
+        "description": "錯誤響應。",
         "properties": {
           "label": {
             "type": "string",
@@ -2233,7 +2233,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventDetail": {
         "type": "object",
@@ -2299,7 +2299,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventSummary": {
         "type": "object",
@@ -2350,7 +2350,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventsPage": {
         "type": "object",
@@ -2365,7 +2365,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "MarketDetail": {
         "type": "object",
@@ -2483,7 +2483,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "MarketSummary": {
         "type": "object",
@@ -2565,7 +2565,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "OutcomeRef": {
         "type": "object",
@@ -2577,7 +2577,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "ServerTimeResponse": {
         "type": "object",
@@ -2586,7 +2586,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TagSummary": {
         "type": "object",
@@ -2601,7 +2601,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TagsPage": {
         "type": "object",
@@ -2616,7 +2616,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TokenBatchPriceItem": {
         "type": "object",
@@ -2631,7 +2631,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TokenPriceHistoryResponse": {
         "type": "object",
@@ -2643,7 +2643,7 @@
             }
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TokenPriceResponse": {
         "type": "object",
@@ -2661,7 +2661,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TokenPricesResponse": {
         "type": "object",
@@ -2673,7 +2673,7 @@
             }
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TokenTickerResponse": {
         "type": "object",
@@ -2694,7 +2694,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "TokenPricePoint": {
         "type": "object",
@@ -2706,7 +2706,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "AccountBookItem": {
         "type": "object",
@@ -2730,7 +2730,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "AssetsResp": {
         "type": "object",
@@ -2757,7 +2757,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "CancelBatchAcceptResp": {
         "type": "object",
@@ -2772,7 +2772,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "CancelOrderAcceptResp": {
         "type": "object",
@@ -2787,7 +2787,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "ClaimRecordResp": {
         "type": "object",
@@ -2814,7 +2814,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "ClaimsAvailableByTokenResp": {
         "type": "object",
@@ -2829,7 +2829,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "ClaimsAvailableEvent": {
         "type": "object",
@@ -2844,7 +2844,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "ClaimsAvailableResp": {
         "type": "object",
@@ -2862,7 +2862,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "ClosePositionAcceptResp": {
         "type": "object",
@@ -2874,7 +2874,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "FeeQueryItem": {
         "type": "object",
@@ -2892,7 +2892,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "FeeResp": {
         "type": "object",
@@ -2904,7 +2904,7 @@
             }
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "OrderDetailResp": {
         "type": "object",
@@ -2964,7 +2964,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "OrderListItem": {
         "type": "object",
@@ -3024,7 +3024,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "PlaceOrderAcceptResp": {
         "type": "object",
@@ -3042,7 +3042,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "PositionItem": {
         "type": "object",
@@ -3087,7 +3087,7 @@
             "type": "boolean"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "PositionListItem": {
         "type": "object",
@@ -3132,7 +3132,7 @@
             "type": "boolean"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "SubmitClaimResp": {
         "type": "object",
@@ -3147,7 +3147,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "UserTradeItem": {
         "type": "object",
@@ -3183,7 +3183,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventMarketsAccountBookResponse": {
         "type": "object",
@@ -3198,7 +3198,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventMarketsOrderListResponse": {
         "type": "object",
@@ -3213,7 +3213,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventMarketsPositionListResponse": {
         "type": "object",
@@ -3228,7 +3228,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventMarketsUserTradesResponse": {
         "type": "object",
@@ -3243,7 +3243,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "LegacyMarket": {
         "type": "object",
@@ -3313,7 +3313,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "LegacyMarketsResponse": {
         "type": "object",
@@ -3328,7 +3328,7 @@
             "type": "integer"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "LegacyOrderBook": {
         "type": "object",
@@ -3352,7 +3352,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "LegacyOutcome": {
         "type": "object",
@@ -3370,7 +3370,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "LegacyPriceSize": {
         "type": "object",
@@ -3382,7 +3382,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "LegacyTrade": {
         "type": "object",
@@ -3415,7 +3415,7 @@
             "type": "string"
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "EventReferencePrice": {
         "type": "object",
@@ -3437,18 +3437,18 @@
             ]
           }
         },
-        "description": "回應物件。"
+        "description": "響應對象。"
       },
       "CurrencyCandlestickList": {
         "type": "array",
-        "description": "列表回應。",
+        "description": "清單響應。",
         "items": {
           "$ref": "#/components/schemas/CurrencyCandlestick"
         }
       },
       "LegacyTradeList": {
         "type": "array",
-        "description": "列表回應。",
+        "description": "清單響應。",
         "items": {
           "$ref": "#/components/schemas/LegacyTrade"
         }

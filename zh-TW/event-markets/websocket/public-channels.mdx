@@ -4,15 +4,15 @@ sidebarTitle: "公共頻道"
 description: "訂閱預測市場公開成交、深度、BBO、價格和市場狀態。"
 ---
 
-公共频道不需要认证。
+公共頻道不需要認證。
 
-**连接地址**
+**連接位址**
 
 ```text
 wss://broker.dexbuilder.com/ws/dex-builder/prediction
 ```
 
-## 订阅
+## 訂閱
 
 ```json
 {
@@ -30,13 +30,13 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 }
 ```
 
-服务端会先返回 ACK。具有缓存状态的频道可能返回 `snapshot`；`trades` 频道只推送 `update`。后续消息使用 `type: "update"`。
+服務端會先回傳 ACK。具有緩存狀態的頻道可能回傳 `snapshot`；`trades` 頻道只推送 `update`。後續消息使用 `type: "update"`。
 
 ## `pred.trades`
 
-使用 `condition_id` 订阅。
+使用 `condition_id` 訂閱。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -59,9 +59,9 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 
 ## `pred.depth`
 
-使用 `token_id` 和 `level` 订阅，支持 5、10、20、50。返回的是完整订单簿，不是增量。
+使用 `token_id` 和 `level` 訂閱，支援 5、10、20、50。回傳的是完整訂單簿，不是增量。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -75,10 +75,16 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
     "level": 20,
     "full": true,
     "bids": [
-      ["0.44", "100"]
+      [
+        "0.44",
+        "100"
+      ]
     ],
     "asks": [
-      ["0.46", "80"]
+      [
+        "0.46",
+        "80"
+      ]
     ],
     "hash": "book-hash",
     "ts": 1720000000123
@@ -88,9 +94,9 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 
 ## `pred.bbo`
 
-使用 `token_id` 订阅。
+使用 `token_id` 訂閱。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -112,9 +118,9 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 
 ## `pred.status`
 
-使用 `market_id` 订阅。
+使用 `market_id` 訂閱。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -149,9 +155,9 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 
 ## `pred.cpi`
 
-使用 `symbol` 和 `interval` 订阅。
+使用 `symbol` 和 `interval` 訂閱。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -172,9 +178,9 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 
 ## `pred.candlestick`
 
-使用 `symbol` 和 `interval` 订阅。
+使用 `symbol` 和 `interval` 訂閱。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -197,13 +203,13 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 }
 ```
 
-缓存的 K 线快照包含 `symbol`、`interval` 和 `history`。
+緩存的 K 線快照包含 `symbol`、`interval` 和 `history`。
 
 ## `pred.oc_price`
 
-使用 `slug` 或 `market_id` 订阅。配置好的币价窗口也可以使用 `symbol` 和 `interval`。
+使用 `slug` 或 `market_id` 訂閱。設定好的幣價窗口也可以使用 `symbol` 和 `interval`。
 
-**返回示例**
+**回傳示例**
 
 ```json
 {
@@ -220,4 +226,4 @@ wss://broker.dexbuilder.com/ws/dex-builder/prediction
 }
 ```
 
-除非字段明确标注为秒，否则时间戳均为 Unix 毫秒时间戳。
+除非欄位明確標注為秒，否則時間戳均為 Unix 毫秒時間戳。
